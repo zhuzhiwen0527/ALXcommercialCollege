@@ -1,0 +1,718 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2B13083635073B7ABFCCBF1C /* Pods_ALXcommercialCollege.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7898194940C33DD32D802F6A /* Pods_ALXcommercialCollege.framework */; };
+		520780901D409A9B00D10610 /* ALXHomeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5207808F1D409A9B00D10610 /* ALXHomeTableViewController.m */; };
+		52EA7DE01D3F17A700866BE8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 52EA7DDF1D3F17A700866BE8 /* main.m */; };
+		52EA7DE91D3F17A700866BE8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52EA7DE71D3F17A700866BE8 /* Main.storyboard */; };
+		52EA7DEB1D3F17A700866BE8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52EA7DEA1D3F17A700866BE8 /* Assets.xcassets */; };
+		52EA7DEE1D3F17A700866BE8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52EA7DEC1D3F17A700866BE8 /* LaunchScreen.storyboard */; };
+		52EA7DF91D3F17A700866BE8 /* ALXcommercialCollegeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 52EA7DF81D3F17A700866BE8 /* ALXcommercialCollegeTests.m */; };
+		52EA7E041D3F17A700866BE8 /* ALXcommercialCollegeUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 52EA7E031D3F17A700866BE8 /* ALXcommercialCollegeUITests.m */; };
+		52EA7E1A1D3F1BE400866BE8 /* ALXAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 52EA7E191D3F1BE400866BE8 /* ALXAppDelegate.m */; };
+		52EA7E1D1D3F1D1C00866BE8 /* RootTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52EA7E1C1D3F1D1C00866BE8 /* RootTabBarViewController.m */; };
+		52EA7E251D3F227700866BE8 /* ALXAFNetTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 52EA7E241D3F227700866BE8 /* ALXAFNetTools.m */; };
+		52EA7E2B1D3F274D00866BE8 /* ALXGetData.m in Sources */ = {isa = PBXBuildFile; fileRef = 52EA7E2A1D3F274D00866BE8 /* ALXGetData.m */; };
+		52EA7E2F1D3F29D700866BE8 /* ALXUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 52EA7E2E1D3F29D700866BE8 /* ALXUtility.m */; };
+		52EA7E331D3F613100866BE8 /* ALXDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 52EA7E321D3F613100866BE8 /* ALXDatabase.m */; };
+		52EA7E351D3F670D00866BE8 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 52EA7E341D3F670D00866BE8 /* libsqlite3.tbd */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		52EA7DF51D3F17A700866BE8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 52EA7DD31D3F17A700866BE8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 52EA7DDA1D3F17A700866BE8;
+			remoteInfo = ALXcommercialCollege;
+		};
+		52EA7E001D3F17A700866BE8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 52EA7DD31D3F17A700866BE8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 52EA7DDA1D3F17A700866BE8;
+			remoteInfo = ALXcommercialCollege;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		5207808E1D409A9B00D10610 /* ALXHomeTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALXHomeTableViewController.h; sourceTree = "<group>"; };
+		5207808F1D409A9B00D10610 /* ALXHomeTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALXHomeTableViewController.m; sourceTree = "<group>"; };
+		52EA7DDB1D3F17A700866BE8 /* ALXcommercialCollege.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ALXcommercialCollege.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		52EA7DDF1D3F17A700866BE8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		52EA7DE81D3F17A700866BE8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		52EA7DEA1D3F17A700866BE8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		52EA7DED1D3F17A700866BE8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		52EA7DEF1D3F17A700866BE8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		52EA7DF41D3F17A700866BE8 /* ALXcommercialCollegeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ALXcommercialCollegeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		52EA7DF81D3F17A700866BE8 /* ALXcommercialCollegeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ALXcommercialCollegeTests.m; sourceTree = "<group>"; };
+		52EA7DFA1D3F17A700866BE8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		52EA7DFF1D3F17A700866BE8 /* ALXcommercialCollegeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ALXcommercialCollegeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		52EA7E031D3F17A700866BE8 /* ALXcommercialCollegeUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ALXcommercialCollegeUITests.m; sourceTree = "<group>"; };
+		52EA7E051D3F17A700866BE8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		52EA7E181D3F1BE400866BE8 /* ALXAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALXAppDelegate.h; sourceTree = "<group>"; };
+		52EA7E191D3F1BE400866BE8 /* ALXAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALXAppDelegate.m; sourceTree = "<group>"; };
+		52EA7E1B1D3F1D1C00866BE8 /* RootTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootTabBarViewController.h; sourceTree = "<group>"; };
+		52EA7E1C1D3F1D1C00866BE8 /* RootTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootTabBarViewController.m; sourceTree = "<group>"; };
+		52EA7E201D3F1FDC00866BE8 /* MYPchHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MYPchHeader.pch; sourceTree = "<group>"; };
+		52EA7E211D3F200B00866BE8 /* ALXHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ALXHeader.h; sourceTree = "<group>"; };
+		52EA7E231D3F227700866BE8 /* ALXAFNetTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALXAFNetTools.h; sourceTree = "<group>"; };
+		52EA7E241D3F227700866BE8 /* ALXAFNetTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALXAFNetTools.m; sourceTree = "<group>"; };
+		52EA7E261D3F260400866BE8 /* ALXURLHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ALXURLHeader.h; sourceTree = "<group>"; };
+		52EA7E291D3F274D00866BE8 /* ALXGetData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALXGetData.h; sourceTree = "<group>"; };
+		52EA7E2A1D3F274D00866BE8 /* ALXGetData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALXGetData.m; sourceTree = "<group>"; };
+		52EA7E2D1D3F29D700866BE8 /* ALXUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALXUtility.h; sourceTree = "<group>"; };
+		52EA7E2E1D3F29D700866BE8 /* ALXUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALXUtility.m; sourceTree = "<group>"; };
+		52EA7E311D3F613100866BE8 /* ALXDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALXDatabase.h; sourceTree = "<group>"; };
+		52EA7E321D3F613100866BE8 /* ALXDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALXDatabase.m; sourceTree = "<group>"; };
+		52EA7E341D3F670D00866BE8 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		7898194940C33DD32D802F6A /* Pods_ALXcommercialCollege.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ALXcommercialCollege.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A0B56F037AA5A63DBFCA0583 /* Pods-ALXcommercialCollege.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ALXcommercialCollege.release.xcconfig"; path = "Pods/Target Support Files/Pods-ALXcommercialCollege/Pods-ALXcommercialCollege.release.xcconfig"; sourceTree = "<group>"; };
+		D7437664BD6489AA684FF593 /* Pods-ALXcommercialCollege.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ALXcommercialCollege.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ALXcommercialCollege/Pods-ALXcommercialCollege.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		52EA7DD81D3F17A700866BE8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52EA7E351D3F670D00866BE8 /* libsqlite3.tbd in Frameworks */,
+				2B13083635073B7ABFCCBF1C /* Pods_ALXcommercialCollege.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52EA7DF11D3F17A700866BE8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52EA7DFC1D3F17A700866BE8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2CD628B25C0106C8362A2F5C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D7437664BD6489AA684FF593 /* Pods-ALXcommercialCollege.debug.xcconfig */,
+				A0B56F037AA5A63DBFCA0583 /* Pods-ALXcommercialCollege.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		5207804E1D40560200D10610 /* ALXThirdLibs */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = ALXThirdLibs;
+			path = ALXcommercialCollege/ALXThirdLibs;
+			sourceTree = SOURCE_ROOT;
+		};
+		52EA7DD21D3F17A700866BE8 = {
+			isa = PBXGroup;
+			children = (
+				52EA7DDD1D3F17A700866BE8 /* ALXcommercialCollege */,
+				52EA7DF71D3F17A700866BE8 /* ALXcommercialCollegeTests */,
+				52EA7E021D3F17A700866BE8 /* ALXcommercialCollegeUITests */,
+				52EA7DDC1D3F17A700866BE8 /* Products */,
+				2CD628B25C0106C8362A2F5C /* Pods */,
+				A76B27A03F0D14D543DE4272 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		52EA7DDC1D3F17A700866BE8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				52EA7DDB1D3F17A700866BE8 /* ALXcommercialCollege.app */,
+				52EA7DF41D3F17A700866BE8 /* ALXcommercialCollegeTests.xctest */,
+				52EA7DFF1D3F17A700866BE8 /* ALXcommercialCollegeUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		52EA7DDD1D3F17A700866BE8 /* ALXcommercialCollege */ = {
+			isa = PBXGroup;
+			children = (
+				52EA7E151D3F1B5400866BE8 /* ALXClasses */,
+				52EA7E161D3F1B5400866BE8 /* ALXResources */,
+				52EA7DDE1D3F17A700866BE8 /* Supporting Files */,
+			);
+			path = ALXcommercialCollege;
+			sourceTree = "<group>";
+		};
+		52EA7DDE1D3F17A700866BE8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				52EA7DDF1D3F17A700866BE8 /* main.m */,
+				52EA7DE71D3F17A700866BE8 /* Main.storyboard */,
+				52EA7DEA1D3F17A700866BE8 /* Assets.xcassets */,
+				52EA7DEC1D3F17A700866BE8 /* LaunchScreen.storyboard */,
+				52EA7DEF1D3F17A700866BE8 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		52EA7DF71D3F17A700866BE8 /* ALXcommercialCollegeTests */ = {
+			isa = PBXGroup;
+			children = (
+				52EA7DF81D3F17A700866BE8 /* ALXcommercialCollegeTests.m */,
+				52EA7DFA1D3F17A700866BE8 /* Info.plist */,
+			);
+			path = ALXcommercialCollegeTests;
+			sourceTree = "<group>";
+		};
+		52EA7E021D3F17A700866BE8 /* ALXcommercialCollegeUITests */ = {
+			isa = PBXGroup;
+			children = (
+				52EA7E031D3F17A700866BE8 /* ALXcommercialCollegeUITests.m */,
+				52EA7E051D3F17A700866BE8 /* Info.plist */,
+			);
+			path = ALXcommercialCollegeUITests;
+			sourceTree = "<group>";
+		};
+		52EA7E151D3F1B5400866BE8 /* ALXClasses */ = {
+			isa = PBXGroup;
+			children = (
+				5207804E1D40560200D10610 /* ALXThirdLibs */,
+				52EA7E301D3F60CE00866BE8 /* ALXDatabase */,
+				52EA7E1F1D3F1F7300866BE8 /* ALXUtility */,
+				52EA7E171D3F1B8800866BE8 /* ALXMain */,
+			);
+			path = ALXClasses;
+			sourceTree = "<group>";
+		};
+		52EA7E161D3F1B5400866BE8 /* ALXResources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ALXResources;
+			sourceTree = "<group>";
+		};
+		52EA7E171D3F1B8800866BE8 /* ALXMain */ = {
+			isa = PBXGroup;
+			children = (
+				52EA7E181D3F1BE400866BE8 /* ALXAppDelegate.h */,
+				52EA7E191D3F1BE400866BE8 /* ALXAppDelegate.m */,
+				52EA7E1B1D3F1D1C00866BE8 /* RootTabBarViewController.h */,
+				52EA7E1C1D3F1D1C00866BE8 /* RootTabBarViewController.m */,
+				5207808E1D409A9B00D10610 /* ALXHomeTableViewController.h */,
+				5207808F1D409A9B00D10610 /* ALXHomeTableViewController.m */,
+			);
+			path = ALXMain;
+			sourceTree = "<group>";
+		};
+		52EA7E1F1D3F1F7300866BE8 /* ALXUtility */ = {
+			isa = PBXGroup;
+			children = (
+				52EA7E201D3F1FDC00866BE8 /* MYPchHeader.pch */,
+				52EA7E211D3F200B00866BE8 /* ALXHeader.h */,
+				52EA7E221D3F21C200866BE8 /* ALXNetFunction */,
+				52EA7E2D1D3F29D700866BE8 /* ALXUtility.h */,
+				52EA7E2E1D3F29D700866BE8 /* ALXUtility.m */,
+			);
+			path = ALXUtility;
+			sourceTree = "<group>";
+		};
+		52EA7E221D3F21C200866BE8 /* ALXNetFunction */ = {
+			isa = PBXGroup;
+			children = (
+				52EA7E261D3F260400866BE8 /* ALXURLHeader.h */,
+				52EA7E281D3F272200866BE8 /* ALXGetData */,
+				52EA7E271D3F26C600866BE8 /* ALXAFNetTools */,
+			);
+			path = ALXNetFunction;
+			sourceTree = "<group>";
+		};
+		52EA7E271D3F26C600866BE8 /* ALXAFNetTools */ = {
+			isa = PBXGroup;
+			children = (
+				52EA7E231D3F227700866BE8 /* ALXAFNetTools.h */,
+				52EA7E241D3F227700866BE8 /* ALXAFNetTools.m */,
+			);
+			name = ALXAFNetTools;
+			sourceTree = "<group>";
+		};
+		52EA7E281D3F272200866BE8 /* ALXGetData */ = {
+			isa = PBXGroup;
+			children = (
+				52EA7E291D3F274D00866BE8 /* ALXGetData.h */,
+				52EA7E2A1D3F274D00866BE8 /* ALXGetData.m */,
+			);
+			name = ALXGetData;
+			sourceTree = "<group>";
+		};
+		52EA7E301D3F60CE00866BE8 /* ALXDatabase */ = {
+			isa = PBXGroup;
+			children = (
+				52EA7E311D3F613100866BE8 /* ALXDatabase.h */,
+				52EA7E321D3F613100866BE8 /* ALXDatabase.m */,
+			);
+			path = ALXDatabase;
+			sourceTree = "<group>";
+		};
+		A76B27A03F0D14D543DE4272 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				52EA7E341D3F670D00866BE8 /* libsqlite3.tbd */,
+				7898194940C33DD32D802F6A /* Pods_ALXcommercialCollege.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		52EA7DDA1D3F17A700866BE8 /* ALXcommercialCollege */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 52EA7E081D3F17A700866BE8 /* Build configuration list for PBXNativeTarget "ALXcommercialCollege" */;
+			buildPhases = (
+				A0315DB4E19D0E2419C585EE /* [CP] Check Pods Manifest.lock */,
+				52EA7DD71D3F17A700866BE8 /* Sources */,
+				52EA7DD81D3F17A700866BE8 /* Frameworks */,
+				52EA7DD91D3F17A700866BE8 /* Resources */,
+				4AEEB4BDEE48A7AD3FCCC340 /* [CP] Embed Pods Frameworks */,
+				55DDDCD8F4B8E9B3971BB9A0 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ALXcommercialCollege;
+			productName = ALXcommercialCollege;
+			productReference = 52EA7DDB1D3F17A700866BE8 /* ALXcommercialCollege.app */;
+			productType = "com.apple.product-type.application";
+		};
+		52EA7DF31D3F17A700866BE8 /* ALXcommercialCollegeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 52EA7E0B1D3F17A700866BE8 /* Build configuration list for PBXNativeTarget "ALXcommercialCollegeTests" */;
+			buildPhases = (
+				52EA7DF01D3F17A700866BE8 /* Sources */,
+				52EA7DF11D3F17A700866BE8 /* Frameworks */,
+				52EA7DF21D3F17A700866BE8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				52EA7DF61D3F17A700866BE8 /* PBXTargetDependency */,
+			);
+			name = ALXcommercialCollegeTests;
+			productName = ALXcommercialCollegeTests;
+			productReference = 52EA7DF41D3F17A700866BE8 /* ALXcommercialCollegeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		52EA7DFE1D3F17A700866BE8 /* ALXcommercialCollegeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 52EA7E0E1D3F17A700866BE8 /* Build configuration list for PBXNativeTarget "ALXcommercialCollegeUITests" */;
+			buildPhases = (
+				52EA7DFB1D3F17A700866BE8 /* Sources */,
+				52EA7DFC1D3F17A700866BE8 /* Frameworks */,
+				52EA7DFD1D3F17A700866BE8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				52EA7E011D3F17A700866BE8 /* PBXTargetDependency */,
+			);
+			name = ALXcommercialCollegeUITests;
+			productName = ALXcommercialCollegeUITests;
+			productReference = 52EA7DFF1D3F17A700866BE8 /* ALXcommercialCollegeUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		52EA7DD31D3F17A700866BE8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = zzw;
+				TargetAttributes = {
+					52EA7DDA1D3F17A700866BE8 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					52EA7DF31D3F17A700866BE8 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 52EA7DDA1D3F17A700866BE8;
+					};
+					52EA7DFE1D3F17A700866BE8 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 52EA7DDA1D3F17A700866BE8;
+					};
+				};
+			};
+			buildConfigurationList = 52EA7DD61D3F17A700866BE8 /* Build configuration list for PBXProject "ALXcommercialCollege" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 52EA7DD21D3F17A700866BE8;
+			productRefGroup = 52EA7DDC1D3F17A700866BE8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				52EA7DDA1D3F17A700866BE8 /* ALXcommercialCollege */,
+				52EA7DF31D3F17A700866BE8 /* ALXcommercialCollegeTests */,
+				52EA7DFE1D3F17A700866BE8 /* ALXcommercialCollegeUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		52EA7DD91D3F17A700866BE8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52EA7DEE1D3F17A700866BE8 /* LaunchScreen.storyboard in Resources */,
+				52EA7DEB1D3F17A700866BE8 /* Assets.xcassets in Resources */,
+				52EA7DE91D3F17A700866BE8 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52EA7DF21D3F17A700866BE8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52EA7DFD1D3F17A700866BE8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4AEEB4BDEE48A7AD3FCCC340 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ALXcommercialCollege/Pods-ALXcommercialCollege-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		55DDDCD8F4B8E9B3971BB9A0 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ALXcommercialCollege/Pods-ALXcommercialCollege-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A0315DB4E19D0E2419C585EE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		52EA7DD71D3F17A700866BE8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52EA7E1A1D3F1BE400866BE8 /* ALXAppDelegate.m in Sources */,
+				52EA7E2B1D3F274D00866BE8 /* ALXGetData.m in Sources */,
+				52EA7E331D3F613100866BE8 /* ALXDatabase.m in Sources */,
+				52EA7DE01D3F17A700866BE8 /* main.m in Sources */,
+				520780901D409A9B00D10610 /* ALXHomeTableViewController.m in Sources */,
+				52EA7E251D3F227700866BE8 /* ALXAFNetTools.m in Sources */,
+				52EA7E2F1D3F29D700866BE8 /* ALXUtility.m in Sources */,
+				52EA7E1D1D3F1D1C00866BE8 /* RootTabBarViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52EA7DF01D3F17A700866BE8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52EA7DF91D3F17A700866BE8 /* ALXcommercialCollegeTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52EA7DFB1D3F17A700866BE8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52EA7E041D3F17A700866BE8 /* ALXcommercialCollegeUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		52EA7DF61D3F17A700866BE8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 52EA7DDA1D3F17A700866BE8 /* ALXcommercialCollege */;
+			targetProxy = 52EA7DF51D3F17A700866BE8 /* PBXContainerItemProxy */;
+		};
+		52EA7E011D3F17A700866BE8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 52EA7DDA1D3F17A700866BE8 /* ALXcommercialCollege */;
+			targetProxy = 52EA7E001D3F17A700866BE8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		52EA7DE71D3F17A700866BE8 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				52EA7DE81D3F17A700866BE8 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		52EA7DEC1D3F17A700866BE8 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				52EA7DED1D3F17A700866BE8 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		52EA7E061D3F17A700866BE8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		52EA7E071D3F17A700866BE8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		52EA7E091D3F17A700866BE8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D7437664BD6489AA684FF593 /* Pods-ALXcommercialCollege.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/ALXcommercialCollege/ALXClasses/ALXUtility/MYPchHeader.pch";
+				INFOPLIST_FILE = ALXcommercialCollege/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ALX.commercialCollege.ALXcommercialCollege;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "$(PODS_ROOT)/**";
+			};
+			name = Debug;
+		};
+		52EA7E0A1D3F17A700866BE8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A0B56F037AA5A63DBFCA0583 /* Pods-ALXcommercialCollege.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/ALXcommercialCollege/ALXClasses/ALXUtility/MYPchHeader.pch";
+				INFOPLIST_FILE = ALXcommercialCollege/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ALX.commercialCollege.ALXcommercialCollege;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "$(PODS_ROOT)/**";
+			};
+			name = Release;
+		};
+		52EA7E0C1D3F17A700866BE8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = ALXcommercialCollegeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ALX.commercialCollege.ALXcommercialCollegeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ALXcommercialCollege.app/ALXcommercialCollege";
+			};
+			name = Debug;
+		};
+		52EA7E0D1D3F17A700866BE8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = ALXcommercialCollegeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ALX.commercialCollege.ALXcommercialCollegeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ALXcommercialCollege.app/ALXcommercialCollege";
+			};
+			name = Release;
+		};
+		52EA7E0F1D3F17A700866BE8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = ALXcommercialCollegeUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ALX.commercialCollege.ALXcommercialCollegeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = ALXcommercialCollege;
+			};
+			name = Debug;
+		};
+		52EA7E101D3F17A700866BE8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = ALXcommercialCollegeUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ALX.commercialCollege.ALXcommercialCollegeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = ALXcommercialCollege;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		52EA7DD61D3F17A700866BE8 /* Build configuration list for PBXProject "ALXcommercialCollege" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				52EA7E061D3F17A700866BE8 /* Debug */,
+				52EA7E071D3F17A700866BE8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		52EA7E081D3F17A700866BE8 /* Build configuration list for PBXNativeTarget "ALXcommercialCollege" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				52EA7E091D3F17A700866BE8 /* Debug */,
+				52EA7E0A1D3F17A700866BE8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		52EA7E0B1D3F17A700866BE8 /* Build configuration list for PBXNativeTarget "ALXcommercialCollegeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				52EA7E0C1D3F17A700866BE8 /* Debug */,
+				52EA7E0D1D3F17A700866BE8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		52EA7E0E1D3F17A700866BE8 /* Build configuration list for PBXNativeTarget "ALXcommercialCollegeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				52EA7E0F1D3F17A700866BE8 /* Debug */,
+				52EA7E101D3F17A700866BE8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 52EA7DD31D3F17A700866BE8 /* Project object */;
+}

@@ -1,0 +1,278 @@
+//
+//  MYPchHeader.pch
+//  runtimeTest
+//
+//  Created by zzw on 16/5/24.
+//  Copyright © 2016年 zzw. All rights reserved.
+//
+
+#ifndef MYPchHeader_pch
+#define MYPchHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+#import "ALXHeader.h"
+
+//NavigationBar 高度
+#define NAvigationBar_HEIGHT 44
+
+//获取屏幕 宽度 高度
+#define SCREEN_WIDTH ([UIScreen mainScreen].bounds.size.width)
+#define SCREEN_HEIGHT ([UIScreen mainScreen].bounds.size.height)
+// View 坐标(x,y)和宽高(width,height)
+#define X(v)                    (v).frame.origin.x
+#define Y(v)                    (v).frame.origin.y
+#define WIDTH(v)                (v).frame.size.width
+#define HEIGHT(v)               (v).frame.size.height
+
+#define MinX(v)                 CGRectGetMinX((v).frame)
+#define MinY(v)                 CGRectGetMinY((v).frame)
+
+#define MidX(v)                 CGRectGetMidX((v).frame)
+#define MidY(v)                 CGRectGetMidY((v).frame)
+
+#define MaxX(v)                 CGRectGetMaxX((v).frame)
+#define MaxY(v)                 CGRectGetMaxY((v).frame)
+
+
+#define RECT_CHANGE_x(v,x)          CGRectMake(x, Y(v), WIDTH(v), HEIGHT(v))
+#define RECT_CHANGE_y(v,y)          CGRectMake(X(v), y, WIDTH(v), HEIGHT(v))
+#define RECT_CHANGE_point(v,x,y)    CGRectMake(x, y, WIDTH(v), HEIGHT(v))
+#define RECT_CHANGE_width(v,w)      CGRectMake(X(v), Y(v), w, HEIGHT(v))
+#define RECT_CHANGE_height(v,h)     CGRectMake(X(v), Y(v), WIDTH(v), h)
+#define RECT_CHANGE_size(v,w,h)     CGRectMake(X(v), Y(v), w, h)
+
+//-------------------打印日志-------------------------
+//DEBUG  模式下打印日志,当前行
+#ifdef DEBUG
+#   define DLog(fmt, ...) NSLog((@"%s [Line %d] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);
+#else
+#   define DLog(...)
+#endif
+
+
+//重写NSLog,Debug模式下打印日志和当前行数
+#if DEBUG
+#define NSLog(FORMAT, ...) fprintf(stderr,"\nfunction:%s line:%d content:%s\n", __FUNCTION__, __LINE__, [[NSString stringWithFormat:FORMAT, ##__VA_ARGS__] UTF8String]);
+#else
+#define NSLog(FORMAT, ...) nil
+#endif
+
+//DEBUG  模式下打印日志,当前行 并弹出一个警告
+#ifdef DEBUG
+#   define ULog(fmt, ...)  { UIAlertView *alert = [[UIAlertView alloc] initWithTitle:[NSString stringWithFormat:@"%s\n [Line %d] ", __PRETTY_FUNCTION__, __LINE__] message:[NSString stringWithFormat:fmt, ##__VA_ARGS__]  delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil]; [alert show]; }
+#else
+#   define ULog(...)
+#endif
+
+
+#define ITTDEBUG
+#define ITTLOGLEVEL_INFO     10
+#define ITTLOGLEVEL_WARNING  3
+#define ITTLOGLEVEL_ERROR    1
+
+#ifndef ITTMAXLOGLEVEL
+
+#ifdef DEBUG
+#define ITTMAXLOGLEVEL ITTLOGLEVEL_INFO
+#else
+#define ITTMAXLOGLEVEL ITTLOGLEVEL_ERROR
+#endif
+
+#endif
+
+// The general purpose logger. This ignores logging levels.
+#ifdef ITTDEBUG
+#define ITTDPRINT(xx, ...)  NSLog(@"%s(%d): " xx, __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__)
+#else
+#define ITTDPRINT(xx, ...)  ((void)0)
+#endif
+
+// Prints the current method's name.
+#define ITTDPRINTMETHODNAME() ITTDPRINT(@"%s", __PRETTY_FUNCTION__)
+
+// Log-level based logging macros.
+#if ITTLOGLEVEL_ERROR <= ITTMAXLOGLEVEL
+#define ITTDERROR(xx, ...)  ITTDPRINT(xx, ##__VA_ARGS__)
+#else
+#define ITTDERROR(xx, ...)  ((void)0)
+#endif
+
+#if ITTLOGLEVEL_WARNING <= ITTMAXLOGLEVEL
+#define ITTDWARNING(xx, ...)  ITTDPRINT(xx, ##__VA_ARGS__)
+#else
+#define ITTDWARNING(xx, ...)  ((void)0)
+#endif
+
+#if ITTLOGLEVEL_INFO <= ITTMAXLOGLEVEL
+#define ITTDINFO(xx, ...)  ITTDPRINT(xx, ##__VA_ARGS__)
+#else
+#define ITTDINFO(xx, ...)  ((void)0)
+#endif
+
+#ifdef ITTDEBUG
+#define ITTDCONDITIONLOG(condition, xx, ...) { if ((condition)) { \
+ITTDPRINT(xx, ##__VA_ARGS__); \
+} \
+} ((void)0)
+#else
+#define ITTDCONDITIONLOG(condition, xx, ...) ((void)0)
+#endif
+
+#define ITTAssert(condition, ...)                                       \
+do {                                                                      \
+    if (!(condition)) {                                                     \
+        [[NSAssertionHandler currentHandler]                                  \
+         handleFailureInFunction:[NSString stringWithUTF8String:__PRETTY_FUNCTION__] \
+         file:[NSString stringWithUTF8String:__FILE__]  \
+         lineNumber:__LINE__                                  \
+         description:__VA_ARGS__];                             \
+    }                                                                       \
+} while(0)
+
+//---------------------打印日志--------------------------
+
+//----------------------系统----------------------------
+
+//获取系统版本
+#define IOS_VERSION [[[UIDevice currentDevice] systemVersion] floatValue]
+#define CurrentSystemVersion [[UIDevice currentDevice] systemVersion]
+
+//获取当前语言
+#define CurrentLanguage ([[NSLocale preferredLanguages] objectAtIndex:0])
+
+//判断是否 Retina屏、设备是否%fhone 5、是否是iPad
+#define isRetina ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(640, 960), [[UIScreen mainScreen] currentMode].size) : NO)
+#define iPhone5 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(640, 1136), [[UIScreen mainScreen] currentMode].size) : NO)
+#define isPad (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+
+//检查系统版本
+#define SYSTEM_VERSION_EQUAL_TO(v)                  ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedSame)
+#define SYSTEM_VERSION_GREATER_THAN(v)              ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedDescending)
+#define SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(v)  ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] != NSOrderedAscending)
+#define SYSTEM_VERSION_LESS_THAN(v)                 ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedAscending)
+#define SYSTEM_VERSION_LESS_THAN_OR_EQUAL_TO(v)     ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] != NSOrderedDescending)
+
+//----------------------图片----------------------------
+
+//读取本地图片
+#define LOADIMAGE(file,ext) [UIImage imageWithContentsOfFile:[[NSBundle mainBundle]pathForResource:file ofType:ext]]
+
+//定义UIImage对象
+#define IMAGE(A) [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:A ofType:nil]]
+
+//定义UIImage对象
+#define ImageNamed(_pointer) [UIImage imageNamed:[UIUtil imageName:_pointer]]
+
+//建议使用前两种宏定义,性能高于后者
+//----------------------图片----------------------------
+
+//----------------------颜色类---------------------------
+// rgb颜色转换（16进制->10进制）
+#define UIColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
+
+
+// 获取RGB颜色
+#define RGBA(r,g,b,a) [UIColor colorWithRed:r/255.0f green:g/255.0f blue:b/255.0f alpha:a]
+#define RGB(r,g,b) RGBA(r,g,b,1.0f)
+
+//背景色
+#define BACKGROUND_COLOR [UIColor colorWithRed:242.0/255.0 green:236.0/255.0 blue:231.0/255.0 alpha:1.0]
+
+//清除背景色
+#define CLEARCOLOR [UIColor clearColor]
+
+
+
+//----------------------颜色类--------------------------
+//----------------------其他----------------------------
+
+//方正黑体简体字体定义
+#define FONTFZ(F) [UIFont fontWithName:@"FZHTJW--GB1-0" size:F]
+// 字体大小(常规/粗体)
+#define BOLDSYSTEMFONT(FONTSIZE)[UIFont boldSystemFontOfSize:FONTSIZE]
+#define SYSTEMFONT(FONTSIZE)    [UIFont systemFontOfSize:FONTSIZE]
+#define FONT(NAME, FONTSIZE)    [UIFont fontWithName:(NAME) size:(FONTSIZE)]
+
+//设置View的tag属性
+#define VIEWWITHTAG(_OBJECT, _TAG)    [_OBJECT viewWithTag : _TAG]
+//程序的本地化,引用国际化的文件
+#define MyLocal(x, ...) NSLocalizedString(x, nil)
+
+//G－C－D
+#define BACK(block) dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), block)
+#define MAIN(block) dispatch_async(dispatch_get_main_queue(),block)
+
+//NSUserDefaults 实例化
+#define USER_DEFAULT [NSUserDefaults standardUserDefaults]
+
+
+//由角度获取弧度 有弧度获取角度
+#define degreesToRadian(x) (M_PI * (x) / 180.0)
+#define radianToDegrees(radian) (radian*180.0)/(M_PI)
+
+
+//** 沙盒路径 ***********************************************************************************
+#define PATH_OF_APP_HOME    NSHomeDirectory()
+#define PATH_OF_TEMP        NSTemporaryDirectory()
+#define PATH_OF_DOCUMENT    [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0]
+
+// View 圆角和加边框
+#define ViewBorderRadius(View, Radius, Width, Color)\
+\
+[View.layer setCornerRadius:(Radius)];\
+[View.layer setMasksToBounds:YES];\
+[View.layer setBorderWidth:(Width)];\
+[View.layer setBorderColor:[Color CGColor]]
+
+// View 圆角
+#define ViewRadius(View, Radius)\
+\
+[View.layer setCornerRadius:(Radius)];\
+[View.layer setMasksToBounds:YES]
+
+/** 时间间隔 */
+#define kHUDDuration            (1.f)
+
+/** 一天的秒数 */
+#define SecondsOfDay            (24.f * 60.f * 60.f)
+/** 秒数 */
+#define Seconds(Days)           (24.f * 60.f * 60.f * (Days))
+
+/** 一天的毫秒数 */
+#define MillisecondsOfDay       (24.f * 60.f * 60.f * 1000.f)
+/** 毫秒数 */
+#define Milliseconds(Days)      (24.f * 60.f * 60.f * 1000.f * (Days))
+
+/** 字符串 二进制 互转 */
+#define STRTODATA(str) ([str dataUsingEncoding:NSUTF8StringEncoding])
+
+#define DATATOSTR(data) ([[NSString  alloc] initWithData:data encoding:NSUTF8StringEncoding])
+
+//self
+#define ALX_WeakSelf typeof(self) __weak weakSelf = self;
+#define ALX_StrongSelf typeof(weakSelf) __strong strongSelf = weakSelf;
+#define ALX_Weak(__obj) typeof(__obj) __weak weak_##__obj = __obj;
+#define ALX_Block(__obj) typeof(__obj) __block block_##__obj = __obj;
+//noticenter
+#define ALX_NotiCenter [NSNotificationCenter defaultCenter]
+#define ALX_NotiCenterPost(__notiName, __obj) [gNotiCenter postNotificationName:__notiName object:__obj]
+
+//window
+#define ALX_Window ((UIWindow *)[[[UIApplication sharedApplication] windows] objectAtIndex:0])
+#define ALX_KeyWindow [UIApplication sharedApplication].keyWindow
+
+//image
+#define ALX_ImageNamed(__name) [UIImage imageNamed:__name]
+
+//string
+#define ALX_Format(__format, ...) [NSString stringWithFormat:__format, ##__VA_ARGS__]
+#define ALX_FormatObj(__obj) [NSString stringWithFormat:@"%@", __obj]
+#define ALX_FormatInteger(__integer) [NSString stringWithFormat:@"%zd", __integer]
+#define ALX_FormatFloat(__float) [NSString stringWithFormat:@"%lf", __float]
+#define ALX_Predicate(__format, ...) [NSPredicate predicateWithFormat:__format, ##__VA_ARGS__]
+
+
+
+
+#endif /* MYPchHeader_pch */
