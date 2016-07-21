@@ -15,14 +15,16 @@
 @implementation ALXAFNetTools
 
 + (ALXAFNetTools *)share{
-    static ALXAFNetTools * tools = nil;
     
+    static ALXAFNetTools * tools = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         if (!tools) {
             tools = [[ALXAFNetTools alloc] init];
         }
     });
+    
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
     return tools;
 }
 
@@ -33,6 +35,7 @@
         
         session = [AFHTTPSessionManager manager];
         
+        
     }
     return self;
 }
@@ -42,20 +45,19 @@
    url = [url stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
     
     [session GET:url parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
-//        NSLog(@"----");
-//        NSLog(@"%lld %lld",downloadProgress.totalUnitCount,downloadProgress.completedUnitCount);
+
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
  
-        
+        [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
         if (successBlock) {
             
             successBlock(responseObject);
         }
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         
-       
+          [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
         if (failedBlock) {
             
             failedBlock(error);
@@ -73,7 +75,9 @@
    
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        
 
+           [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
         
         if (successBlock) {
             
@@ -82,6 +86,7 @@
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         
+           [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
         NSLog(@"%@",error);
         if (failedBlock) {
             
