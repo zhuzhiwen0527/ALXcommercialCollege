@@ -76,6 +76,22 @@
 
 }
 
++ (NSString *)getDateWithStamp:(NSString*)stamp{
+
+    if (stamp.length == 0) {
+        return nil;
+    }
+    NSDate * date = [NSDate dateWithTimeIntervalSince1970:stamp.integerValue/1000];
+    
+    NSDateFormatter * fm = [[NSDateFormatter alloc] init];
+    
+    [fm setDateFormat:@"yyyy-MM-dd HH:mm"];
+    
+    return [fm stringFromDate:date];
+    
+
+}
+
 + (void)createAlertWith:(NSString *)titleStr message:(NSString *)message action:(void(^)())action target:(id)target{
 
     UIAlertController * alert = [UIAlertController alertControllerWithTitle:titleStr message:message preferredStyle:UIAlertControllerStyleAlert];

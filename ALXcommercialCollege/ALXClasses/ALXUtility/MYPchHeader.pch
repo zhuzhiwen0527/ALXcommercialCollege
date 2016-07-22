@@ -161,9 +161,8 @@ do {                                                                      \
 //定义UIImage对象
 #define IMAGE(A) [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:A ofType:nil]]
 
-//定义UIImage对象
-#define ImageNamed(_pointer) [UIImage imageNamed:[UIUtil imageName:_pointer]]
-
+//image
+#define ALX_ImageNamed(__name) [UIImage imageNamed:__name]
 //建议使用前两种宏定义,性能高于后者
 //----------------------图片----------------------------
 
@@ -262,8 +261,7 @@ do {                                                                      \
 #define ALX_Window ((UIWindow *)[[[UIApplication sharedApplication] windows] objectAtIndex:0])
 #define ALX_KeyWindow [UIApplication sharedApplication].keyWindow
 
-//image
-#define ALX_ImageNamed(__name) [UIImage imageNamed:__name]
+
 
 //string
 #define ALX_Format(__format, ...) [NSString stringWithFormat:__format, ##__VA_ARGS__]
