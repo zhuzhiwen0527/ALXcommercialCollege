@@ -23,7 +23,7 @@
 
 //网络库
 #import "AFNetworking.h"
-
+#import "ALXAFNetTools.h"
 //自动布局
 #import "SDAutoLayout.h"
 

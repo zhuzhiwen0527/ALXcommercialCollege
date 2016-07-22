@@ -90,17 +90,13 @@
 }
 
 + (void)cretateAlertWith:(NSString *)titleStr message:(NSString *)message target:(id)target{
-
-  UIAlertController * alert = [UIAlertController alertControllerWithTitle:titleStr message:message preferredStyle:UIAlertControllerStyleAlert];
     
-    [target presentViewController:alert animated:YES completion:nil];
- 
+    UIAlertController * alert = [UIAlertController alertControllerWithTitle:titleStr message:message preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction * cancleAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
+    [alert addAction:cancleAction];
     [target presentViewController:alert animated:YES completion:nil];
     
-    [target performSelector:@selector(dismiss:) withObject:alert afterDelay:1];
-}
-- (void)dismiss:(UIAlertController *)alert{
 
-    [alert dismissViewControllerAnimated:YES completion:nil];
 }
+
 @end
